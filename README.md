@@ -8,4 +8,4 @@ Microcontroller:-Raspberry Pi 3 with loadcells
 Server: Node.js
 DB: MongoDB
 
-This project was presented in the ICANN India Hasckathon 2016 Hyderabad. My team was part of the final top 10 teams in the hackathon. A video of our final submission is attached.
+This project was presented in the ICANN India Hasckathon 2016 Hyderabad. My team was part of the final top 10 teams in the hackathon.
