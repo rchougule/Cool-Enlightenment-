@@ -1,0 +1,355 @@
+@font-face{
+	font-family: logo;
+	src:url(logo.ttf);
+}
+
+@font-face{
+	font-family: content;
+	src:url(content.ttf);
+}
+body{
+	font-family: content;
+}
+
+#mainApp{
+	position: absolute;
+	background-color:black;
+	top:0;
+	left:0;
+}
+.screens{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	font-family: content;
+	overflow: hidden;
+	animation-duration: 0.8s;
+}
+
+#firstScreen{
+	background-color: black;
+	background: black;
+}
+#secondScreen{
+	background: black;
+	display: none;
+}
+#thirdScreen{
+	background: black;
+	display: none;
+}
+
+#appLogo{
+	position: absolute;
+	top:25%;
+	left:0%;
+	height: 42%;
+	width: 100%;
+}
+#appName{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	font-family: logo;
+	top:-8%;
+	left: 0%;
+	font-size: 30vw;
+	color:#6DBFE2;
+	animation-iteration-count: infinite;
+	animation-duration: 1.5s;
+}
+#appNameSecondScreen{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	font-family: logo;
+	top:-10%;
+	left: 0%;
+	font-size: 28vw;
+	color:black;
+}
+#companyName{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	font-family: content;
+	bottom:2%;
+	left: 0%;
+	font-size: 5vw;
+	color:#6DBFE2;
+}
+#swipe{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	font-family: content;
+	bottom:15%;
+	left: 0%;
+	font-size: 10vw;
+	color:#6DBFE2;
+}
+
+.fullBar{
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+#upperBar{
+	height: 30%;
+	top:0%;
+	background: url("main.jpg");
+	background-size: cover;
+}
+#menuBar{
+	height: 13%;
+	top:17%;
+	background: linear-gradient(rgba(00,0,0,0),#6DBFE2);
+}
+#menuIcon1{
+	position: absolute;
+	bottom: 12%;
+	left: 11%;
+}
+#menuIcon2{
+	position: absolute;
+	bottom: 12%;
+	left: 33.5%;
+}
+#menuIcon3{
+	position: absolute;
+	bottom: 12%;
+	right: 33.5%;
+}
+#menuIcon4{
+	position: absolute;
+	bottom: 12%;
+	right: 11%;
+}
+
+.iconShadow{
+	position: absolute;
+	height: 100%;
+	background: linear-gradient(rgba(0,0,0,0),#ed7aff);
+	width: 25%;
+	top: 0;
+}
+#shadow1{
+	display: block;
+	left: 0;
+}
+#shadow2{
+	display: none;
+	left: 25%;
+}
+#shadow3{
+	display: none;
+	left: 50%;
+}
+#shadow4{
+	display: none;
+	left: 75%;
+}
+
+.contentScreen{
+	position: absolute;
+	height:70% ;
+	width:100% ;
+	top:30% ;
+	left: 0%;
+}
+#firstContentScreen{
+	display: block;
+	overflow: scroll;
+}
+#secondContentScreen{
+	display: none;
+	overflow: scroll;
+}
+#thirdContentScreen{
+	display: none;
+}
+#fourthContentScreen{
+	display: none;
+}
+#titleScreen{
+	top: 03%;
+	font-size: 7vw;
+	height: auto;
+	color: #ed7aff;
+}
+
+
+#populateCards{
+	position: absolute;
+	top: 15%;
+	left:0;
+	width: 100%;
+	overflow: scroll;
+	min-height: 85%;
+}
+
+#populateBuyCards{
+	position: absolute;
+	top: 15%;
+	left:0;
+	width: 100%;
+	overflow: scroll;
+	min-height: 85%;
+}
+
+.card{
+	position: relative;
+	height: 22%;
+	width: 100%;
+	padding-top: 14%;
+}
+
+#quantity{
+	position: absolute;
+	font-size: 5vw;
+	top: 50%;
+	left:5%;
+	transform: translate(0%,-50%);
+}
+#articleIcon{
+	position: absolute;
+	font-size: 10vw;
+	top: 50%;
+	left:15%;
+	transform: translate(0%,-50%);
+}
+
+#articleIcon1{
+	position: absolute;
+	font-size: 10vw;
+	top: 50%;
+	left:6%;
+	transform: translate(0%,-50%);
+}
+#articleIcon3{
+	position: absolute;
+	font-size: 10vw;
+	top: 50%;
+	left:6%;
+	transform: translate(0%,-50%);
+}
+#detail{
+	position: absolute;
+	font-size: 6.5vw;
+	top: 50%;
+	left:30%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+#detail1{
+	position: absolute;
+	font-size: 6.5vw;
+	top: 50%;
+	left:19%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+#detail3{
+	position: absolute;
+	font-size: 6.5vw;
+	top: 50%;
+	left:19%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+#weight{
+	position: absolute;
+	font-size: 6.5vw;
+	top: 50%;
+	right: 10%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+
+#prize{
+	position: absolute;
+	font-size: 6.5vw;
+	top: 50%;
+	right: 23%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+
+#prize3{
+	position: absolute;
+	font-size: 6.5vw;
+	top: 50%;
+	right: 23%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+#addCart{
+	position: absolute;
+	font-size: 7.5vw;
+	top: 50%;
+	right: 8%;
+	transform: translate(0%,-50%);
+	color: #6DBFE2;
+}
+
+.notification{
+	position: absolute;
+	top: 47%;
+	right: 0;
+	min-height: 12%;
+	width: 88%;
+	background: #ed7aff;
+	display: none;
+	animation-duration: 0.3s;
+}
+#notificationContent{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	height: 100%;
+	width: 80%;
+	font-size:6vw;
+	color: black;
+	transform: translate(0,-50%);
+}
+
+
+
+#closeButton{
+	position: absolute;
+	right: 8%;
+	top: 5%;
+	color: #ffe0bd;
+	font-size: 10vw;
+}
+
+#titleThirdScreen{
+	top: 03%;
+	font-size: 7vw;
+	height: auto;
+	color: #ed7aff;
+}
+#titleThirdScreenRecommand{
+	top: 35%;
+	font-size: 7vw;
+	height: auto;
+	color: #ed7aff;
+}
+#addedToCart{
+	top: 40%;
+}
+
+#capsi{
+	top:0%;
+	display: none;
+}
+#sausage{
+	top:-20%;
+	display: none;
+}
+#custard{
+	top:0%;
+	display: none;
+}

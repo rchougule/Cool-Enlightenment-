@@ -20,7 +20,7 @@ while(1):
 		print("==============")
 
 		if _status == "IN":
-			weight_object = weight_new - weight_previous;   #when the weights are from sensors, remove the comment - removed
+			weight_object = weight_new; #- weight_previous;   #when the weights are from sensors, remove the comment - removed
 			flag = 0;
 
 			for j in db.items.find({"object":color}):
@@ -32,10 +32,10 @@ while(1):
 					wt = k['weight'];
 					wt_i = k['weight_initial'];
 
-					if(wt > 0.2*wt_i):
-						db.items.update({"object":color},{'$set':{"weight_critical":False}});
-					else:
-						db.items.update({"object":color},{'$set':{"weight_critical":False}});
+					# if(wt > 0.2*wt_i):
+					# 	db.items.update({"object":color},{'$set':{"weight_critical":False}});
+					# else:
+					# 	db.items.update({"object":color},{'$set':{"weight_critical":False}});
 			
 
 			if flag == 0:
@@ -53,9 +53,16 @@ while(1):
 				wt = k['weight'];
 				wt_i = k['weight_initial'];
 
-				if(wt < 0.2*wt_i):
-					db.items.update({"object":color},{'$set':{"weight_critical":True}});
-				
+				# if(wt < 0.2*wt_i):
+				# 	db.items.update({"object":color},{'$set':{"weight_critical":True}});
+		
+
+		for it in db.items.find({"object":color}):
+			wt_num = it['weight'];
+			wt_den = it['weight_initial'];
+
+			wt_percent = (wt_num/wt_den)*100;
+			db.items.update({"object":color},{'$set':{"weight_percent":wt_percent}});		
 
 		db.process.update({"fridge_still":True},{'$set':{"ws_prev":weight_new}});
 		db.process.update({"fridge_still":True},{'$set':{"obj_status":"IN/OUT"}});

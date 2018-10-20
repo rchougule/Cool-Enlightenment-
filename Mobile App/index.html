@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/animate.css">
+  <link rel="stylesheet" href="assets/main.css">
+  <script src="assets/jquery.js"></script>
+  <script src="assets/main.js"></script>
+
+ <script>
+    window.onload = function() {
+        document.getElementById("mainApp").style.height = window.innerHeight + "px";
+        document.getElementById("mainApp").style.width = window.innerWidth + "px";
+    };
+  </script>
+</head>
+<body>
+    <div id="mainApp">
+      <div class="screens" id="firstScreen">
+        <div id="appLogo" align="center">
+          <div style="height: 100%;width: 42vh; border-radius: 50%;overflow: hidden; border-style: dashed;border-color: black;">
+            <img src="assets/final_video.gif" height="100%" width="auto" style="position: relative; left:-15%;">
+          </div>
+        </div>
+        <div id="appName" align="center" class="animated swing">
+          Zoup
+        </div>
+        <div id="companyName" align="center">
+          Made With Love.
+          <br>
+          | Team Zoup | India |
+        </div>
+        <div id="swipe" align="center" onclick="toSecondScreen()">
+          SWIPE
+          <br>
+          <i class="fa fa-eercast fa-lg"></i>
+        </div>
+      </div>
+    <div class="screens" id="secondScreen">
+      <div class="fullBar" id="upperBar">
+          <i class="fa fa-user-circle-o fa-lg" style="position: absolute;right: 3%;top: 5%;" ></i> 
+      </div>
+      <div id="appNameSecondScreen" align="center" >
+          <b>Zoup</b>
+      </div>
+      <div class="fullBar" id="menuBar">
+        <div class="iconShadow" id="shadow1"></div>
+        <div class="iconShadow" id="shadow2"></div>
+        <div class="iconShadow" id="shadow3"></div>
+        <div class="iconShadow" id="shadow4"></div>
+          <i class="fa fa-snowflake-o fa-lg" id="menuIcon1" onclick="showContentScreen(1)"></i> 
+          <i class="fa fa-shopping-cart fa-lg" id="menuIcon2" onclick="showContentScreen(2)"></i> 
+          <i class="fa fa-cutlery fa-lg" id="menuIcon3" onclick="showContentScreen(3)"></i> 
+          <i class="fa fa-bell fa-lg" id="menuIcon4" onclick="showContentScreen(4)"></i> 
+      </div>
+
+      <div class="contentScreen" id="firstContentScreen">
+       <div class="fullBar" id="titleScreen" align="center" onclick="dummyFxToPopulateCard()">
+         <b>CONTENTS</b>
+       </div>
+       <div id="populateCards">
+           <!--div class="card" id="contentsCard">
+             <div id="quantity"><i class="fa fa-circle" style="color: red;"></i></div>
+             <div id="articleIcon"><i class="fa fa-bitbucket" style="color: blue;"></i></div>
+             <div id="detail">Kissan Ketup</div>
+             <div id="weight">25kg</div>
+           </div-->
+        </div>
+         
+       </div> 
+
+      <div class="contentScreen" id="secondContentScreen">
+        <div class="fullBar" id="titleScreen" align="center" onclick="dummyFxToPopulateBuyCard()">
+          <b>TO BUY</b>
+        </div>
+        <div id="populateBuyCards">
+           <!--div class="card" id="buyCard">
+             <div id="articleIcon1"><i class="fa fa-bitbucket" style="color: blue;"></i></div>
+             <div id="detail1">Kissan Ketup</div>
+             <div id="prize">Rs.25</div>
+             <div id="addCart"><i class="fa fa-cart-plus" style="color: #6dbfe2;"></i></div>
+           </div-->
+        </div>
+      </div>
+
+      <div class="contentScreen" id="thirdContentScreen">
+        <div class="fullBar" id="titleScreen" align="center" onclick="dummyFxToCallNotification()">
+          <b>TO COOK</b>
+        </div>
+          <div id="toCookGif" style="position: absolute;top: 18%; height: 50vw;width: 50vw;border-radius: 50%;overflow: hidden; left: 25vw;">
+          <img src="assets/tocook.gif" height="100%" width="auto" style="position: relative;left: -10%">
+        </div>
+        <div id="youCant" style="color: #ffe0bd;font-size: 6vw;position: absolute;top: 70%;width: 80%;left: 10%" align="center">
+          You Dont Have Enough Ingridents To Cook Anything!
+        </div>
+        <div id="food" style="color: #ffe0bd; font-size: 6vw">
+          <div style="position: absolute;top: 18%;left: 7%;height: 30vw;width: 30vw;background:url('assets/food.jpg');"></div>
+          
+          <div style="position: absolute;top: 18%;left: 7%;height: 30vw;width: 60vw;left: 45vw">
+            efswdv werf qscf qoihgnjwiaim sc
+          </div>
+        </div>
+      </div>
+      <div class="contentScreen" id="fourthContentScreen">
+        <div class="fullBar" id="titleScreen" align="center">
+          <b>NOTIFICATIONS</b>
+        </div>
+      </div>
+      <div class="notification" id="notify">
+        <div id="notificationContent"></div>
+        <i class="fa fa-bell" style="position:absolute;color: black;top: 50%;left:5%;transform: translate(0%,-50%);font-size: 12vw"></i>
+      </div>
+      </div>
+      <div class="screens" id="thirdScreen" >
+        <div style="position: absolute;top: 5%; height: 50vw;width: 50vw;border-radius: 50%;overflow: hidden; left: 25vw">
+          <img src="assets/recomand.gif" height="100%" width="auto">
+        </div>
+        <div id="closeButton" onclick="closeThirdScreen()">
+          <i class="fa fa-close"></i>
+        </div> 
+        <div class="contentScreen" id="addedToCart" >
+        <div class="fullBar" id="titleThirdScreen" align="center">
+          <b>YOU BROUGHT</b>
+        </div>
+        <div class="card" id="buyCard">
+             <div id="articleIcon3"><i class="fa fa-bitbucket"></i></div>
+             <div id="detail3"></div>
+             <div id="prize3">n</div>
+             <div id="addCart"><i class="fa fa-check-circle" style="color: #6dbfe2;"></i></div>
+        </div>
+        <div class="fullBar" id="titleThirdScreenRecommand" align="center">
+          <b>RECOMMANDATIONS</b>
+        </div>
+          <div class="card" id="capsi">
+             <div id="articleIcon3"><i class="fa fa-pagelines" style="color: green;"></i></div>
+             <div id="detail3">Capsicum</div>
+             <div id="prize3">Rs.20/kg</div>
+             <div id="addCart"><i class="fa fa-cart-plus" style="color: #6dbfe2;"></i></div>
+        </div>
+          <div class="card" id="sausage">
+             <div id="articleIcon3"><i class="fa fa-superpowers" style="color: red"></i></div>
+             <div id="detail3">Sausages</div>
+             <div id="prize3">Rs.121</div>
+             <div id="addCart"><i class="fa fa-cart-plus" style="color: #6dbfe2;"></i></div>
+        </div>
+          <div class="card" id="custard">
+             <div id="articleIcon3"><i class="fa fa-yelp" style="color: yellow"></i></div>
+             <div id="detail3">Custard</div>
+             <div id="prize3">Rs.98</div>
+             <div id="addCart"><i class="fa fa-cart-plus" style="color: #6dbfe2;"></i></div>
+        </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
